@@ -1,5 +1,6 @@
 package org.jhaughton;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,10 +38,17 @@ public class CoffeeController {
     @RequestMapping(path = "/preference", method = RequestMethod.GET)
     public ResponseEntity<String> getCoffeesWithPreferences() {
         JSONObject response = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
         for (Coffee coffee : Coffee.values()) {
-            response.put("name", coffee.name());
-            response.put("preference", coffee.getPreference());
+            JSONObject coffeeItem = new JSONObject();
+            coffeeItem.put("preference", coffee.getPreference());
+            coffeeItem.put("name", coffee.name());
+
+            jsonArray.put(coffeeItem);
         }
+
+        response.put("coffees", jsonArray);
 
         return new ResponseEntity<>(response.toString(), HttpStatus.OK);
     }
