@@ -38,7 +38,8 @@ public class CoffeeController {
     public ResponseEntity<String> getCoffeesWithPreferences() {
         JSONObject response = new JSONObject();
         for (Coffee coffee : Coffee.values()) {
-            response.put(coffee.name(), coffee.getPreference());
+            response.put("name", coffee.name());
+            response.put("preference", coffee.getPreference());
         }
 
         return new ResponseEntity<>(response.toString(), HttpStatus.OK);
