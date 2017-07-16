@@ -1,29 +1,63 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="https://haughters.github.io/assets/css/styles.css" />
-<title>CupMaster Server Project</title>
-</head>
-<body>
-<a href="http://haughters.github.io">&larr;Back to CV </a>
-<h1>CupMaster Server</h1>
-<h2>A simple Java Webservice to choose a McDonald's coffee.</h2>
-<table>
-<tr>
-<th>
-<img class="profile-img" src="https://cdn2.iconfinder.com/data/icons/metro-ui-dock/512/Java.png" />
-</th>
-<th>
-<img class="profile-img" src="http://3.bp.blogspot.com/-syuWABg8JRc/Vqt6WIMZaGI/AAAAAAAABqc/41gRstsDKVs/s1600/spring-boot-project-logo.png" />
-</th>
-<th>
-<img class="profile-img" src="https://ucarecdn.com/cc6abaa3-acab-4ce7-a0fd-a0ef563ef08c/" />
-</th>
-</tr>
-<tr>
-<td>Java</td>
-<td>Spring Boot</td>
-<td>Heroku</td>
-</tr>
-</table>
-</body>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="https://haughters.github.io/assets/css/styles.css" />
+        <title>CupMaster Server Project</title>
+    </head>
+    <body>
+        <a href="http://haughters.github.io">&larr;Back to CV </a>
+        <div id="rcornerheader">
+            <table width="100%">
+                <tr id="container">
+                    <th align="left">
+                        <h1>CupMaster Server</h1>
+                        <h2>A Java RESTful WebService to choose a McDonald's coffee.</h2>
+                    </th>
+                    <th align="right">
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>
+                                        <img class="profile-img" src="https://cdn2.iconfinder.com/data/icons/metro-ui-dock/512/Java.png" />
+                                    </th>
+                                    <th>
+                                        <img class="profile-img" src="http://3.bp.blogspot.com/-syuWABg8JRc/Vqt6WIMZaGI/AAAAAAAABqc/41gRstsDKVs/s1600/spring-boot-project-logo.png" />
+                                    </th>
+                                    <th>
+                                        <img class="profile-img" src="https://ucarecdn.com/cc6abaa3-acab-4ce7-a0fd-a0ef563ef08c/" />
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td>Spring Boot</td>
+                                    <td>Heroku</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="rcornercontainer">
+            <h2>About</h2>
+            <p>This project acts as the webservice component of an app that chooses which coffee from McDonalds to choose. It is based upon a Spring Boot web application and accepts REST requests to perform operations.
+            </p>
+            <h2>Current Functionality</h2>
+            <ul>
+                <li>Display all configured coffees</li>
+                <li>Randomly choose a coffee for the user based on preference</li>
+                <li>Set preferences for each individual coffee</li>
+            </ul>
+            <h2>Desired Functionailty</h2>
+            <ul>
+                <li>Data Persistence</li>
+                <li>Swagger Documentation</li>
+                <li>Add Coffees via Post</li>
+            </ul>
+            <h2>Link to Deployed Application</h2>
+                <a href="https://cupmaster.herokuapp.com/coffee">List Coffees</a>
+                <a href="https://cupmaster.herokuapp.com/coffee/preference">Coffee Preferences</a>
+                <a href="https://cupmaster.herokuapp.com/coffee/choose">Choose a Coffee</a>
+        </div>
+    </body>
 </html>
